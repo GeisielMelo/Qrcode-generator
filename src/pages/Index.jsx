@@ -1,6 +1,9 @@
 import React, { useState } from "react";
-import { Container, QRCodeImage, Input, Button } from "./styles";
 import QRCodeLink from "qrcode";
+import Search from "../components/Search";
+import QRCodeImage from "../components/QRCodeImage";
+import Wrapper from "../components/Wrapper"
+
 
 const Index = () => {
   const [QRCodeUrl, setQRCodeUrl] = useState("");
@@ -16,21 +19,18 @@ const Index = () => {
       setQRCodeUrlDownload(url);
     });
   };
-  
+
   return (
-    <Container>
-      <QRCodeImage 
-        value={QRCodeUrl} />
-      <Input
+    <Wrapper>
+      <QRCodeImage value={QRCodeUrl} />
+      <Search
         placeholder="Informe o link ou mensagem."
         onChange={(e) => handleQRCode(e)}
+        href={QRCodeUrlDownload}
+        download="QRCode.png"
+        buttonText="Gerar QRCode"
       />
-      <Button 
-        href={QRCodeUrlDownload} 
-        download="QRCode.png">
-        Download
-      </Button>
-    </Container>
+    </Wrapper>
   );
 };
 
