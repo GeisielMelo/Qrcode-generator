@@ -1,12 +1,11 @@
 import React from "react";
-import { StyledButton, StyledInput } from "./styles";
-import QRCode from "react-qr-code";
+import { StyledButton, StyledInput, StyledQRCode } from "./styles";
 import QRCodeLink from "qrcode";
 
 const Index = () => {
   return (
     <>
-      <QRCode value="hello" />
+      <StyledQRCode value="helloww" />
       <StyledInput placeholder="Informe o link ou mensagem." />
       <StyledButton>Download QRCode</StyledButton>
     </>
