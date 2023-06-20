@@ -9,6 +9,7 @@ const Wrapper = styled.div`
   padding: 20px;
   background-color: #fff;
   border-radius: 8px;
+  margin: 0 20px;
 `;
 
 export default Wrapper;
